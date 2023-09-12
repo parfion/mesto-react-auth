@@ -1,0 +1,9 @@
+.element__reaction_like {
+    background: url('../../../images/Like_active.svg');
+    opacity: 1;
+}
+
+.element__reaction_like:hover {
+    opacity: 1;
+    transition: all .2s ease-out;
+}

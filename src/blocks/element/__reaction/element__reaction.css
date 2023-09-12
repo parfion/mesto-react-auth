@@ -1,0 +1,16 @@
+.element__reaction {
+    box-sizing: border-box;
+    background: url('../../../images/Like.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.element__reaction:hover {
+    opacity: 0.5;
+    transition: all .3s ease-in;
+}

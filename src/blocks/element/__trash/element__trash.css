@@ -1,0 +1,13 @@
+.element__trash {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url('../../../images/Delete_button.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    width: 18px;
+    height: 19px;
+    cursor: pointer;
+}

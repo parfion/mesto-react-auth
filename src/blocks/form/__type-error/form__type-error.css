@@ -1,0 +1,8 @@
+.form__type-error {
+    display: inline;
+    color: #FF0000;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    min-height: 30px;
+}
