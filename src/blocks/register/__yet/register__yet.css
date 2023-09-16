@@ -1,0 +1,13 @@
+.register__yet {
+  margin: 0;
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 425px) {
+  .register__yet {
+    padding-top: 20px;
+  }
+}

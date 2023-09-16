@@ -1,0 +1,11 @@
+.header__link-out {
+  color: #A9A9A9;
+}
+
+@media screen and (max-width: 425px) {
+  .header__link-out {
+    font-size: 18px;
+    padding-top: 18px;
+    padding-left: 0;
+  }
+}

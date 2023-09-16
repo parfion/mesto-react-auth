@@ -4,7 +4,10 @@
 /*Блок page и header*/
 @import url('./blocks/page/page.css');
 @import url('./blocks/header/header.css');
+@import url('./blocks/header/__info/header__info.css');
 @import url('./blocks/header/__logo/header__logo.css');
+@import url('./blocks/header/__link/header__link.css');
+@import url('./blocks/header/__link-out/header__link-out.css');
 
 /*Блок profile*/
 @import url('./blocks/profile/profile.css');
@@ -50,3 +53,15 @@
 @import url('./blocks/popup/__open-picture/popup__open-picture.css');
 @import url('./blocks/popup/__picture/popup__picture.css');
 @import url('./blocks/popup/__name/popup__name.css');
+@import url('./blocks/popup/__register-done/popup__register-done.css');
+@import url('./blocks/popup/__container-register/popup__container-register.css');
+@import url('./blocks/popup/__title-register.css/popup__title-register.css');
+
+/* Регистрация */
+@import url('./blocks/register/register.css');
+@import url('./blocks/register/__name/register__name.css');
+@import url('./blocks/register/__form/register__form.css');
+@import url('./blocks/register/__input/register__input.css');
+@import url('./blocks/register/__form-submit/register__form-submit.css');
+@import url('./blocks/register/__yet/register__yet.css');
+@import url('./blocks/register/__link/register__link.css');

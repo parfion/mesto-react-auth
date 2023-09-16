@@ -7,3 +7,10 @@
         max-width: 103.74px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .header__logo {
+        order: 1;
+        padding-top: 27px;
+    }
+}

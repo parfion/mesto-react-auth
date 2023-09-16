@@ -1,0 +1,12 @@
+.popup__register-done {
+  min-height: 120px;
+  background-size: contain;
+  border: none;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .popup__register-done {
+    margin-bottom: 40px;
+  }
+}

@@ -49,7 +49,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
         minLength="2" 
         maxLength="40" 
         placeholder="Имя" 
-        value={name} 
+        value={name || ''} 
         onChange={handleNameChange} />
       <span className="profile-input-error form__type-error"></span>
 
@@ -62,7 +62,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
         minLength="2" 
         maxLength="200" 
         placeholder="Вид деятельности" 
-        value={description} 
+        value={description || ''} 
         onChange={handleDescriptionChange} />
       <span className="profession-input-error form__type-error"></span>
   </PopupWithForm>

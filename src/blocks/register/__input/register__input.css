@@ -1,0 +1,26 @@
+.register__input {
+  background-color: transparent;
+  color: #FFF;
+  border: 0;
+  border-bottom: 2px solid #CCCCCC;
+  padding-bottom: 13px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  min-width: 358px;
+}
+
+.register__input:first-child {
+  margin-bottom: 30px;
+}
+
+.register__input::placeholder {
+  color: #CCC;
+}
+
+@media screen and (max-width: 425px) {
+  .register__input {
+    min-width: 260px;
+  }
+}

@@ -1,0 +1,21 @@
+.register__form-submit {
+  margin-top: 216px;
+  background-color: white;
+  color: black;
+  min-height: 50px;
+  min-width: 358px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .register__form-submit {
+    margin-top: 173px;
+    min-width: 260px;
+    font-size: 16px;
+  }
+}
