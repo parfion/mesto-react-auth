@@ -1,8 +1,8 @@
 {
-  "name": "mesto-on-react",
+  "name": "mesto-react-auth",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://parfion.github.io/mesto-on-react/",
+  "homepage": "https://parfion.github.io/mesto-react-auth/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
