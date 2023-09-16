@@ -32,7 +32,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [register, setRegister] = useState(null);
   const [intoTooltip, setIntoTooltip] = useState(false);
-  const [userData, setUserData] = useState({email: '', password: ''});
+  const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -132,7 +132,6 @@ function App() {
       .then((res) => {
         setRegister(res);
         setIntoTooltip(true);
-        setUserData(res);
         navigate('/signin');
       })
       .catch((err) => {
@@ -168,7 +167,8 @@ function App() {
       .then((res) => {
         if (res) {
         setLoggedIn(true);
-        setUserData({ email: res.data.email, password: res.data.password });
+        setEmail(res.data.email);
+        console.log(email);
         navigate('/', {replace: true})
         }
       })
@@ -176,7 +176,7 @@ function App() {
 
   function handleExit() {
     setLoggedIn(false);
-    setUserData({email: '', password: ''});
+    setEmail('');
     localStorage.removeItem('token');
   }
 
@@ -193,7 +193,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header mail={userData} onExit={handleExit}/>
+        <Header email={email} onExit={handleExit}/>
 
         <Routes>
           <Route path="/signup" element={<Register onRegister={handleRegister}/>} />

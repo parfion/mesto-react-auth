@@ -22,14 +22,14 @@ function Login({ onLogin }) {
 				<form className="register__form" onSubmit={handleSubmit}>
 					<input 
             className="register__input" 
-            type="email" 
+            type="text" 
             placeholder="Email"
             value={email}
             onChange={handleEmailChange}>
           </input>
 					<input 
             className="register__input" 
-            type="password" 
+            type="text" 
             placeholder="Пароль"
             value={password}
             onChange={handlePasswordChange}>
