@@ -168,7 +168,6 @@ function App() {
         if (res) {
         setLoggedIn(true);
         setEmail(res.data.email);
-        console.log(email);
         navigate('/', {replace: true})
         }
       })
