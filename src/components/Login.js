@@ -16,28 +16,28 @@ function Login({ onLogin }) {
     e.preventDefault();
     onLogin({ email, password })
   }
-	return (
-		<div className="register">
-			<h2 className="register__name">Вход</h2>
-				<form className="register__form" onSubmit={handleSubmit}>
-					<input 
+  return (
+    <div className="register">
+      <h2 className="register__name">Вход</h2>
+        <form className="register__form" onSubmit={handleSubmit}>
+          <input 
             className="register__input" 
             type="text" 
             placeholder="Email"
             value={email}
             onChange={handleEmailChange}>
           </input>
-					<input 
+          <input 
             className="register__input" 
-            type="text" 
+            type="password" 
             placeholder="Пароль"
             value={password}
             onChange={handlePasswordChange}>
           </input>
-					<button className="register__form-submit" type="text">Войти</button>
-			</form>
-		</div>
-	)
+          <button className="register__form-submit" type="text">Войти</button>
+      </form>
+    </div>
+  )
 }
   
 export default Login;

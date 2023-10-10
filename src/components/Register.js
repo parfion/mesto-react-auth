@@ -35,7 +35,7 @@ const Register = ({ onRegister }) => {
             minLength="4"
             maxLength="50"
             className="register__input" 
-            type="text" 
+            type="password" 
             placeholder="Пароль" 
             value={password}
             onChange={handlePasswordChange}>

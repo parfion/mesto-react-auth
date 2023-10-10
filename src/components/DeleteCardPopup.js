@@ -1,10 +1,10 @@
 import PopupWithForm from "./PopupWithForm";
 
-function DeleteCardPopup ({ isOpen, onClose, deleteCard, onCardDelete, isLoading }) {
+function DeleteCardPopup ({ isOpen, onClose, cardToDelete, onCardDelete, isLoading }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    onCardDelete(deleteCard);
+    onCardDelete(cardToDelete);
   }
   
   return (
