@@ -1,5 +1,5 @@
 # Проект: Место (React)
-[Сайт](https://parfionalexander.github.io/react-mesto-auth/)
+[Сайт](https://parfion.github.io/react-mesto-auth/)
 
 ## Описание
 Проект "Место" предоставляет пользователю информацию о туристическах местах России. Проект реализован при помощи CRA.
