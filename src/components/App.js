@@ -39,6 +39,8 @@ function App() {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
+  const token = localStorage.getItem('token');
+
   useEffect(() => {
     if (loggedIn) {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
@@ -73,7 +75,7 @@ function App() {
 
   function handleCardLike(card) {
     setIsLoading(true);
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i === currentUser._id);
     api
       .changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
@@ -153,8 +155,6 @@ function App() {
       .login(email, password)
       .then((res) => {
         if(res.token) {
-          setLoggedIn(true);
-          localStorage.setItem('token', res.token);
           navigate('/', {replace: true});
           return res;
         } 
@@ -162,29 +162,24 @@ function App() {
       .catch((err) => console.error(`Ошибка: ${err}`))
   };
 
-  useEffect(() => {
-    const jwt = localStorage.getItem('token');
-    if (jwt) { checkToken(jwt) }
-  }, [loggedIn])
-
-  function checkToken(jwt) { 
-    auth
-      .checkToken(jwt)
-      .then((res) => {
-        if (res) {
-        setLoggedIn(true);
-        setEmail(res.data.email);
-        navigate('/', {replace: true})
-        }
-      })
-      .catch((err) => console.error(`Ошибка: ${err}`))
-  } 
-
   function handleExit() {
     setLoggedIn(false);
     setEmail('');
     localStorage.removeItem('token');
-  }
+  };
+
+  useEffect(() => {
+    if (token) {
+      auth
+        .checkToken(token)
+        .then(res => {
+          setLoggedIn(true);
+          setEmail(res.email);
+          navigate('/');
+        })
+        .catch(console.error);
+    }
+  }, [token, navigate]);
 
   function closeAllPopups() {
     setEditAvatarPopupOpen(false);
@@ -194,7 +189,7 @@ function App() {
     setSelectedCard(null);
     setCardToDelete(null);
     setIsInfoTooltipOpen(false);
-  }
+  };
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

@@ -1,5 +1,6 @@
 .element__pic {
     height: 78.12%;
+    min-width: 282px;
     object-fit: cover;
 }
 
